@@ -13,3 +13,7 @@
 .movie-list {
     list-style-type: none; 
 }
+
+.movie-input, #submit {
+    margin-top: 20px;
+}
