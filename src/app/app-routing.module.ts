@@ -15,6 +15,7 @@ const toDoRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(toDoRoutes)
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

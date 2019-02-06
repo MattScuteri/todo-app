@@ -1,8 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      {{ title }}
+    </h1>
+  </div>
 <div class="flex-container">
-  <button type="button">
-    <h2>Click here to enter</h2>
+  <button type="button" routerLink="/todo">
+    <h2>Click here to see the list!</h2>
   </button>
 </div>
-
-
+<router-outlet></router-outlet>
