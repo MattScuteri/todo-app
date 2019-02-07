@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MoviesService } from '../movies.service';
 @Component({
   selector: 'app-to-do-list',
   templateUrl: './to-do-list.component.html',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoListComponent implements OnInit {
 
+  constructor(public movieService:MoviesService) {}
+
   moviesToWatch = [];
   moviesAlreadyWatched = [];
   movieInput = '';
 
   addMovie(movie) {
     console.log(movie);
+    this.movieService.getMovies(movie).then(data => {
+      console.log(data);
+    })
     this.moviesToWatch.push(movie);
     this.movieInput = '';
   }
