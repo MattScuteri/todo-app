@@ -2,22 +2,22 @@
     <div class='list-container'>
         <h2>Movies I Want to Watch</h2>
         <ul class='movie-list'>
-          <li>Movie 1</li>
-          <li>Movie 2</li>
-          <li>Movie 3</li>
+          <li *ngFor='let movie of moviesToWatch'>
+            {{movie}}
+          </li>
         </ul>
       </div>
       
       <div class='list-container'>
         <h2>Movies I Have Watched</h2>
         <ul class='movie-list'>
-          <li>Movie 4</li>
-          <li>Movie 5</li>
-          <li>Movie 6</li>
+          <li *ngFor='let movieWatched of moviesAlreadyWatched'>
+            {{movieWatched}}
+          </li>
         </ul>
       </div>
 </div>
 <div class='container'>
-    <input class='movie-input'>
-    <button id='submit' type='button'>Submit</button>
+    <input class='movie-input' (keyup.enter)='addMovie(newMovie.value)' #newMovie (blur)="newMovie.value=''">
+    <button id='submit' type='button' (click)='addMovie(newMovie.value)'>Submit</button>
 </div>

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoListComponent implements OnInit {
 
-  constructor() { }
+  moviesToWatch = [];
+  moviesAlreadyWatched = [];
 
-  ngOnInit() {
+  addMovie(newMovie) {
+    this.moviesToWatch.push(newMovie);
   }
+
+  ngOnInit() {}
 
 }
