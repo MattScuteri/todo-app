@@ -9,11 +9,12 @@ export class ToDoListComponent implements OnInit {
 
   moviesToWatch = [];
   moviesAlreadyWatched = [];
-  newMovie = '';
+  movieInput = '';
 
-  addMovie(newMovie) {
-    this.moviesToWatch.push(newMovie);
-    this.newMovie = '';
+  addMovie(movie) {
+    console.log(movie);
+    this.moviesToWatch.push(movie);
+    this.movieInput = '';
   }
 
   watchedMovie(movie, i) {

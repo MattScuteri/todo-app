@@ -20,7 +20,8 @@
 </div>
 <div class='container'>
     <input class='movie-input' 
-      (keyup.enter)='addMovie(newMovie.value)' 
-      [(ngModel)]='newMovie'>
+      (keyup.enter)='addMovie(newMovie.value)'
+      [(ngModel)]='movieInput'
+      #newMovie>
     <button id='submit' type='button' (click)='addMovie(newMovie.value)'>Submit</button>
 </div>
