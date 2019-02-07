@@ -14,6 +14,12 @@ export class ToDoListComponent implements OnInit {
     this.moviesToWatch.push(newMovie);
   }
 
+  watchedMovie(movie, i) {
+    console.log(movie, i);
+    this.moviesToWatch.splice(i, 1);
+    this.moviesAlreadyWatched.push(movie);
+  }
+
   ngOnInit() {}
 
 }

@@ -2,8 +2,9 @@
     <div class='list-container'>
         <h2>Movies I Want to Watch</h2>
         <ul class='movie-list'>
-          <li *ngFor='let movie of moviesToWatch'>
+          <li *ngFor='let movie of moviesToWatch; let i = index'>
             {{movie}}
+            <button type='button' (click)="watchedMovie(movie, i)">X</button>
           </li>
         </ul>
       </div>
@@ -18,6 +19,8 @@
       </div>
 </div>
 <div class='container'>
-    <input class='movie-input' (keyup.enter)='addMovie(newMovie.value)' #newMovie (blur)="newMovie.value=''">
+    <input class='movie-input' 
+      (keyup.enter)='addMovie(newMovie.value)' 
+      #newMovie>
     <button id='submit' type='button' (click)='addMovie(newMovie.value)'>Submit</button>
 </div>
