@@ -21,6 +21,6 @@
 <div class='container'>
     <input class='movie-input' 
       (keyup.enter)='addMovie(newMovie.value)' 
-      #newMovie>
+      [(ngModel)]='newMovie'>
     <button id='submit' type='button' (click)='addMovie(newMovie.value)'>Submit</button>
 </div>
