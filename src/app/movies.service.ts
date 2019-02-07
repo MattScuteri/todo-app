@@ -10,11 +10,12 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
-  private url = "https://www.omdb.com/t="; 
-  private urlEnd = "&y=&plot=short&apikey=trilogy";
+  private url = "http://www.omdb.com/?t="; 
+  private urlEnd = "&apikey=trilogy";
+
 
   getMovies(title) {
-    let header = new HttpHeaders();
+    let header = new HttpHeaders;
     header.append('Content-Type', 'application/json');
 
     return new Promise((resolve, reject) => {

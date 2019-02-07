@@ -18,6 +18,9 @@ export class ToDoListComponent implements OnInit {
     this.movieService.getMovies(movie).then(data => {
       console.log(data);
     })
+    .catch(err => {
+      console.log(err);
+    })
     this.moviesToWatch.push(movie);
     this.movieInput = '';
   }
