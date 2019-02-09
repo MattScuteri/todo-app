@@ -21,7 +21,6 @@ export class ToDoListComponent implements OnInit {
     .catch(err => {
       console.log(err);
     })
-    this.moviesToWatch.push(movie);
     this.movieInput = '';
   }
 

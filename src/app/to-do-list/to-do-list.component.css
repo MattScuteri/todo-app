@@ -7,7 +7,6 @@
 .list-container {
     border: 1px solid red;
     padding: 20px;
-    max-width: 50%;
 }
 
 .movie-list {
@@ -16,4 +15,10 @@
 
 .movie-input, #submit {
     margin-top: 20px;
+}
+
+.movie-img {
+    width: 50%;
+    height: 50%;
+    justify-content: center;
 }
