@@ -3,7 +3,7 @@
         <h2>Movies I Want to Watch</h2>
         <ul class='movie-list'>
           <li *ngFor='let movie of moviesToWatch; let i = index'>
-            {{movie}}
+            <img src={{movie.Poster}} alt={{movie.Title}}>
             <button type='button' (click)="watchedMovie(movie, i)">X</button>
           </li>
         </ul>
@@ -13,7 +13,7 @@
         <h2>Movies I Have Watched</h2>
         <ul class='movie-list'>
           <li *ngFor='let movieWatched of moviesAlreadyWatched'>
-            {{movieWatched}}
+            <img src={{movieWatched.Poster}} alt={{movieWatched.Title}}>
           </li>
         </ul>
       </div>

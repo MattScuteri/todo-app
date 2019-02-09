@@ -10,7 +10,7 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
-  private url = "http://www.omdb.com/?t="; 
+  private url = "http://www.omdbapi.com/?t="; 
   private urlEnd = "&apikey=trilogy";
 
 
@@ -23,7 +23,7 @@ export class MoviesService {
         headers: header
       }).subscribe(
         res => {
-          resolve(JSON.stringify(res));
+          resolve(res);
         },
         err => {
           reject(err);
